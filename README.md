@@ -33,6 +33,15 @@ What if we could (at least partially) fix all this? With barely any effort?
 ⇧    z  x  c  v  b  n  m  ,  .  /      ⇧
 fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
+```
+⎋  F1  F2  F3  F4  F5  F6  F7  F8  F9  F10  F11  F12  ⌽
+_  |  @  #  $  %  ^  &  *  `  [  ]  ~  ⌫
+⇥  q  w  e  r  t  y  u  i  o  '  -  +  \
+⇪   a  s  d  f  g  h  j  k  l  p  ;    ↩
+⇧    z  x  c  v  b  n  m  ,  .  /      ⇧
+fn ⎈  ⌘  ⎇  ⍽  ⇮  ⌘  ⎈  ←  ↓  ↑  →
+```
+⍽
 <!--- template for keyboard borrowed from the [yak-layout](https://github.com/wincent/yak-layout/blob/master/README.md) -->
 <!--- symbols are put according to https://jdebp.uk/FGA/iso-9995-7-symbols.html -->
 
@@ -48,11 +57,32 @@ fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 <!---  template for keyboard borrowed from the [yak-layout](https://github.com/wincent/yak-layout/blob/master/README.md) -->
 
 ## Usage
-Put your fingers on [awef jto;] or [awef jtoi]. That is your home row. Boom.
+Put your fingers on [awef jtop] or [awef jtoi]. That is your home row.
+You now use your right pinky to type alphabet without twisting your ankle.
 
 ## Design specifications
 * Game/copy-paste compatible (preserves qwer/asdf/zxcv)
 * Preserves modifier keys (Relearning these take a lot of time)
-* Sane home row
+* Preserve hjkl for older audiences still using vi
+* Use sane home row
 * Work with any ISO compatible keyboard layout (European, US, KR types considered; but JP type to be considered optionally)
 * Be as conservative as possible so that normal people may "actually" use it
+
+## Possibly FAQ
+* Why are the positions of / and \ still quite arbitrary?
+To US keyboard users, yes, it may seem rather arbitrary. But for others, it may look symmatric, because \ is placed elsewhere.
+
+* Why is the position of ` as arbitrary as it was before?
+Because no one uses it tbh. At least now it's on the right side of the keyboard along with all the other accents.
+
+* Why not put - and ~ together?
+Because they are not interchangable in any specific language, afaik.
+
+* How can I try this?
+On Windows, I may upload the layout I've made with Microsoft Keyboard Layout Creator, a downloadable app.
+On Mac, I may upload the layout I made with Ukelele.
+For Linux and BSDs, I may upload the keyboard files I am using. I might make and upload an app that adds the keyboard layout and switch to it (and back from it), but that's quite unlikely.
+
+
+## Possible future modifications
+The possition of [] and {} may be swapped in the future.
