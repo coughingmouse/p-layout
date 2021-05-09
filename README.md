@@ -36,12 +36,12 @@ fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
 ⎋  F1  F2  F3  F4  F5  F6  F7  F8  F9  F10  F11  F12  ⌽
 _  |  @  #  $  %  ^  &  *  `  [  ]  ~  ⌫
-⇥  q  w  e  r  t  y  u  i  o  '  -  +  \
-⇪   a  s  d  f  g  h  j  k  l  p  ;    ↩
-⇧    z  x  c  v  b  n  m  ,  .  /      ⇧
+⇥  Q  W  E  R  T  Y  U  I  O  "  {  }  !
+⇪   A  S  D  F  G  H  J  K  L  P  :    ↩
+⇧    Z  X  C  V  B  N  M  <  >  ?      ⇧
 fn ⎈  ⌘  ⎇  ⍽  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
-⍽
+
 <!--- template for keyboard borrowed from the [yak-layout](https://github.com/wincent/yak-layout/blob/master/README.md) -->
 <!--- symbols are put according to https://jdebp.uk/FGA/iso-9995-7-symbols.html -->
 
@@ -53,6 +53,14 @@ fn ⎈  ⌘  ⎇  ⍽  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ⇪   a  s  d  f  g  h  j  k  l  i  ;    ↩
 ⇧    z  x  c  v  b  n  m  ,  .  /      ⇧
 fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
+```
+```
+⎋  F1  F2  F3  F4  F5  F6  F7  F8  F9  F10  F11  F12  ⌽
+_  |  @  #  $  %  ^  &  *  `  [  ]  ~  ⌫
+⇥  Q  W  E  R  P  Y  U  T  O  "  {  }  !
+⇪   A  S  D  F  G  H  J  K  L  I  :    ↩
+⇧    Z  X  C  V  B  N  M  <  >  ?      ⇧
+fn ⎈  ⌘  ⎇  ⍽  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
 <!---  template for keyboard borrowed from the [yak-layout](https://github.com/wincent/yak-layout/blob/master/README.md) -->
 
@@ -67,6 +75,7 @@ You now use your right pinky to type alphabet without twisting your ankle.
 * Use sane home row
 * Work with any ISO compatible keyboard layout (European, US, KR types considered; but JP type to be considered optionally)
 * Be as conservative as possible so that normal people may "actually" use it
+* (International English specific) Move T to the home row
 
 ## Possibly FAQ
 * Why are the positions of / and \ still quite arbitrary?
