@@ -70,17 +70,23 @@ You now use your right pinky to type alphabet without twisting your ankle.
 
 ## Possibly FAQ
 * Why are the positions of / and \ still quite arbitrary?
+
 To US keyboard users, yes, it may seem rather arbitrary. But for others, it may look symmatric, because \ is placed elsewhere.
 
 * Why is the position of ` as arbitrary as it was before?
+
 Because no one uses it tbh. At least now it's on the right side of the keyboard along with all the other accents.
 
 * Why not put - and ~ together?
+
 Because they are not interchangable in any specific language, afaik.
 
 * How can I try this?
+
 On Windows, I may upload the layout I've made with Microsoft Keyboard Layout Creator, a downloadable app.
+
 On Mac, I may upload the layout I made with Ukelele.
+
 For Linux and BSDs, I may upload the keyboard files I am using. I might make and upload an app that adds the keyboard layout and switch to it (and back from it), but that's quite unlikely.
 
 
