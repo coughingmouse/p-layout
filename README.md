@@ -1,27 +1,6 @@
 # P Layout
 
-Layouts that you don't really need to learn and doesn't suck as much as Qwerty.
-
-## Introduction
-### 0
-#### 0.0
-Learning keyboard layout always sucks. 
-
-Learning Qwerty sucked. But you got away with it.
-Learning Dvorak sucks because you have to relearn everything anyway.
-TBH you only need to replace P (and T if you are an English user).
-If you already learned Dvorak, it still sucks because you can't use copy--paste intuitively, nor play games without tweaking settings every time.
-
-#### 0.1
-If you think about it, the position of the special letters suck. Not intuitive nor useful.
-
-#### 0.2
-Ergonomics of normal keyboards suck. Home row assumes that your fingers are robot fingers. And pretty much every alternative keyboard layouts assume this "Home row" to be asdf jkl;.
-All ergonomic keyboards suck as well, because you either have to relearn typing (e.g. Ergodox, planck) and is not any better tbh, or the keyswitches suck (e.g. Microsoft Ergonomic keyboards).
-
-### 1
-What if we could (at least partially) fix all this? With barely any effort?
-
+Two easy-to-learn and intuitive layouts: one for everyone and another for English speakers who overtype Ts.
 
 ## P layout
 ### Default layout
@@ -67,6 +46,39 @@ fn ⎈  ⌘  ⎇  ⍽  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ## Usage
 Put your fingers on [awef jtop] or [awef jtoi]. That is your home row.
 You now use your right pinky to type alphabet without twisting your ankle.
+
+## Characteristics
+### Benefits
+* Maybe your hands hurt less
+* Numbers make sense: most importantly, keyboard mapping for navigation on Youtube video makes sense
+* If you are trying to learn a new layout anyway, this will take the least time to get used to.
+
+### Cons
+* If you are not trying to learn a new layout, this will take some, although minimal, time to get used to.
+
+
+## Introduction
+### 0
+#### 0.0
+Learning keyboard layout always sucks. 
+
+Learning Qwerty sucked. But you got away with it.
+Learning Dvorak sucks because you have to relearn everything anyway.
+TBH you only need to replace P (and T if you are an English user).
+If you already learned Dvorak, it still sucks because you can't use copy--paste intuitively, nor play games without tweaking settings every time.
+
+#### 0.1
+If you think about it, the position of the special letters suck. Not intuitive nor useful.
+
+#### 0.2
+Ergonomics of normal keyboards suck. Home row assumes that your fingers are robot fingers. And pretty much every alternative keyboard layouts assume this "Home row" to be asdf jkl;.
+All ergonomic keyboards suck as well, because you either have to relearn typing (e.g. Ergodox, planck) and is not any better tbh, or the keyswitches suck (e.g. Microsoft Ergonomic keyboards).
+
+### 1
+What if we could (at least partially) fix all this? With barely any effort?
+
+
+
 
 ## Design requirements
 * Game/copy-paste compatible (preserves qwer/asdf/zxcv)
