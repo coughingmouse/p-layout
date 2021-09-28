@@ -14,11 +14,11 @@ fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
 ```
 ⎋  F1  F2  F3  F4  F5  F6  F7  F8  F9  F10  F11  F12  ⌽
-_  |  @  #  $  %  ^  &  *  `  [  ]  ~  ⌫
+⍽  |  @  #  $  %  ^  &  *  `  [  ]  ~  ⌫
 ⇥  Q  W  E  R  T  Y  U  I  O  "  {  }  !
 ⇪   A  S  D  F  G  H  J  K  L  P  :    ↩
 ⇧    Z  X  C  V  B  N  M  <  >  ?      ⇧
-fn ⎈  ⌘  ⎇  ⍽  ⇮  ⌘  ⎈  ←  ↓  ↑  →
+fn ⎈  ⌘  ⎇  _  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
 
 <!--- template for keyboard borrowed from the [yak-layout](https://github.com/wincent/yak-layout/blob/master/README.md) -->
@@ -35,13 +35,15 @@ fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
 ```
 ⎋  F1  F2  F3  F4  F5  F6  F7  F8  F9  F10  F11  F12  ⌽
-_  |  @  #  $  %  ^  &  *  `  [  ]  ~  ⌫
+⍽  |  @  #  $  %  ^  &  *  `  [  ]  ~  ⌫
 ⇥  Q  W  E  R  P  Y  U  T  O  "  {  }  !
 ⇪   A  S  D  F  G  H  J  K  L  I  :    ↩
 ⇧    Z  X  C  V  B  N  M  <  >  ?      ⇧
-fn ⎈  ⌘  ⎇  ⍽  ⇮  ⌘  ⎈  ←  ↓  ↑  →
+fn ⎈  ⌘  ⎇  _  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
 <!---  template for keyboard borrowed from the [yak-layout](https://github.com/wincent/yak-layout/blob/master/README.md) -->
+
+* Note that _ and ⍽ may not be implemented correctly.
 
 ## Usage
 Put your fingers on [awef jtop] or [awef jtoi]. That is your home row.
