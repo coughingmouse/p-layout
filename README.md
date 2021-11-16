@@ -5,7 +5,7 @@ Two easy-to-learn and intuitive layouts: one for everyone and another for Englis
 ## P layout
 ### Default layout
 ```
-⎋  F1  F2  F3  F4  F5  F6  F7  F8  F9  F10  F11  F12  ⌽
+⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12  ⌽
 0  1  2  3  4  5  6  7  8  9  (  )  =  ⌫
 ⇥  q  w  e  r  t  y  u  i  o  '  -  +  \
 ⇪   a  s  d  f  g  h  j  k  l  p  ;    ↩
@@ -13,7 +13,7 @@ Two easy-to-learn and intuitive layouts: one for everyone and another for Englis
 fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
 ```
-⎋  F1  F2  F3  F4  F5  F6  F7  F8  F9  F10  F11  F12  ⌽
+⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12  ⌽
 ⍽  |  @  #  $  %  ^  &  *  `  [  ]  ~  ⌫
 ⇥  Q  W  E  R  T  Y  U  I  O  "  {  }  !
 ⇪   A  S  D  F  G  H  J  K  L  P  :    ↩
@@ -24,9 +24,9 @@ fn ⎈  ⌘  ⎇  _  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 <!--- template for keyboard borrowed from the [yak-layout](https://github.com/wincent/yak-layout/blob/master/README.md) -->
 <!--- symbols are put according to https://jdebp.uk/FGA/iso-9995-7-symbols.html -->
 
-### International English layout specification
+### International English layout (Qwerpy)
 ```
-⎋  F1  F2  F3  F4  F5  F6  F7  F8  F9  F10  F11  F12  ⌽
+⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12  ⌽
 0  1  2  3  4  5  6  7  8  9  (  )  =  ⌫
 ⇥  q  w  e  r  p  y  u  t  o  '  -  +  \
 ⇪   a  s  d  f  g  h  j  k  l  i  ;    ↩
@@ -34,7 +34,7 @@ fn ⎈  ⌘  ⎇  _  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
 ```
-⎋  F1  F2  F3  F4  F5  F6  F7  F8  F9  F10  F11  F12  ⌽
+⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12  ⌽
 ⍽  |  @  #  $  %  ^  &  *  `  [  ]  ~  ⌫
 ⇥  Q  W  E  R  P  Y  U  T  O  "  {  }  !
 ⇪   A  S  D  F  G  H  J  K  L  I  :    ↩
@@ -83,7 +83,8 @@ What if we could (at least partially) fix all this? With barely any effort?
 
 
 ## Design requirements
-* Game/copy-paste compatible (preserves qwer/asdf/zxcv)
+* Common shortcuts such as copy-paste and select all preserved (qw, as, zxcv)
+* Game compatible (preserves qwer, asdf)
 * Preserves modifier keys (Relearning these take a lot of time)
 * Preserve hjkl for older audiences still using vi
 * Use sane home row
@@ -106,11 +107,11 @@ Because they are not interchangable in any specific language, afaik.
 
 * How can I try this?
 
-On Windows, I may upload the layout I've made with Microsoft Keyboard Layout Creator, a downloadable app.
+For Windows, I uploaded the layout I've made with Microsoft Keyboard Layout Creator, a downloadable app. Download the repository as a zip file and open p_en folder. You should see an executable file.
 
-On Mac, I may upload the layout I made with Ukelele.
+On Mac, I may upload the layout I made with Ukelele. Until then, the only way is to make it yourself.
 
-For Linux and BSDs, I may upload the keyboard files I am using. I might make and upload an app that adds the keyboard layout and switch to it (and back from it), but that's quite unlikely.
+For Linux and BSDs, I [uploaded](https://github.com/coughingmouse/p-layout-linux) the thingy I now use to install the Qwerpy layout. Note that as of 2021-11-16, only the English version is usable. I did not test it on BSDs so it will likely not work.
 
 
 ## Possible future modifications
