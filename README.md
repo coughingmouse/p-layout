@@ -107,12 +107,11 @@ Because they are not interchangable in any specific language, afaik.
 
 * How can I try this?
 
-For Windows, I uploaded the layout I've made with Microsoft Keyboard Layout Creator, a downloadable app. Download the repository as a zip file and open p_en folder. You should see an executable file.
+For Windows, I uploaded the layout I've made with Microsoft Keyboard Layout Creator, a downloadable app. Download the repository as a zip file and open p_en folder. You should see an executable file. Note that spacebar cannot be used for non-space letters without using IME, which MKLC is not for, so the underscore is placed under the escape key. Non-breaking space is not used because when I tried mapping it to shift + space, it caused error everywhere, not just in codes.
 
 On Mac, I may upload the layout I made with Ukelele. Until then, the only way is to make it yourself.
 
-For Linux and BSDs, I [uploaded](https://github.com/coughingmouse/p-layout-linux) the thingy I now use to install the Qwerpy layout. Note that as of 2021-11-16, only the English version is usable. I did not test it on BSDs so it will likely not work.
-
+For Linux and BSDs, I [uploaded](https://github.com/coughingmouse/p-layout-linux) the thingy I now use to install the layout.
 
 ## Possible future modifications
 The possition of [] and {} may be swapped in the future.
