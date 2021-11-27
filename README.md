@@ -14,7 +14,7 @@ fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
 ```
 ⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12  ⌽
-⍽  |  @  #  $  %  ^  &  *  `  [  ]  ~  ⌫
+·  |  @  #  $  %  ^  &  *  `  [  ]  ~  ⌫
 ⇥  Q  W  E  R  T  Y  U  I  O  "  {  }  !
 ⇪   A  S  D  F  G  H  J  K  L  P  :    ↩
 ⇧    Z  X  C  V  B  N  M  <  >  ?      ⇧
@@ -35,7 +35,7 @@ fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
 ```
 ⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12  ⌽
-⍽  |  @  #  $  %  ^  &  *  `  [  ]  ~  ⌫
+·  |  @  #  $  %  ^  &  *  `  [  ]  ~  ⌫
 ⇥  Q  W  E  R  P  Y  U  T  O  "  {  }  !
 ⇪   A  S  D  F  G  H  J  K  L  I  :    ↩
 ⇧    Z  X  C  V  B  N  M  <  >  ?      ⇧
@@ -43,7 +43,7 @@ fn ⎈  ⌘  ⎇  _  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
 <!---  template for keyboard borrowed from the [yak-layout](https://github.com/wincent/yak-layout/blob/master/README.md) -->
 
-* Note that _ and ⍽ may not be implemented correctly.
+* Note that _ is typed with ⇧ + 0 instead on Windows.
 
 ## Usage
 Put your fingers on [awef jtop] or [awef jtoi]. That is your home row.
@@ -107,11 +107,9 @@ Because they are not interchangable in any specific language, afaik.
 
 * How can I try this?
 
-For Windows, I uploaded the layout I've made with Microsoft Keyboard Layout Creator, a downloadable app. Download the repository as a zip file and open p_en folder. You should see an executable file. Note that spacebar cannot be used for non-space letters without using IME, which MKLC is not for, so the underscore is placed under the escape key. Non-breaking space is not used because when I tried mapping it to shift + space, it caused error everywhere, not just in codes.
+For Windows, I uploaded the layout I've made with Microsoft Keyboard Layout Creator, a downloadable app. Download the repository as a zip file and open p_en folder. You should see an executable file. Run it and **DO NOT** delete anything in the downloaded repository until you delete the layout with the same executable file. Note that spacebar cannot be used for non-space letters without using IME, which MKLC is not for, so the underscore is placed under the escape key. Non-breaking space is not used because when I tried mapping it to shift + space, it caused error everywhere, not just in codes.
 
-On Mac, I may upload the layout I made with Ukelele. Until then, the only way is to make it yourself.
+On Mac, I uploaded the layout I made with Ukelele on this repository. You should somehow place the buldle file at "/Library/Keyboard Layouts" (or at "~/Library/Keyboard Layouts" if you want to install the keyboard for a specific user) so that the layout can be used on the device before (and on the password dialogs) and after login. sudo touch the Keyboard Layouts folder to inform Mac that you did something to your keyboard layout. You should restart your computer after that; logging out and back in won't do. Then you will have to somehow add it to your list of layouts as well as make it default for user and for the login screen. To uninstall, remove the file and touch the parent folder again. This all could probably be automated, but I'm too lazy to make a script. Maybe you can help?
 
-For Linux and BSDs, I [uploaded](https://github.com/coughingmouse/p-layout-linux) the thingy I now use to install the layout.
+For Linux and BSDs, I [uploaded](https://github.com/coughingmouse/p-layout-linux) the thingy I now use to install the layout on a different repository. Maybe I should move that here?
 
-## Possible future modifications
-The possition of [] and {} may be swapped in the future.
