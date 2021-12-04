@@ -57,7 +57,7 @@ fi
 
 # Restart
 while true; do
-  echo "Now, you need to reboot your macOS to finish installing the keyboard. Once you log back in, open System Preferences. Once you enter Keyboard - Input Sources, press the + icon, where under English, you should be able to find the layouts.(Okay, let me reboot/I'll reboot later)"
+  echo "Now, you need to reboot your macOS to finish installing the keyboard. Once you log back in, open System Preferences. Once you enter Keyboard - Input Sources, press the + icon, where under English, you should be able to find the layouts. You can cycle through your layouts with control+space, but I recommend setting capslock as layout switcher as well, which you can also adjust in the Keyboard system preferences. (Okay, let me reboot already/I'll reboot later)"
   read -r REPLY
   case $REPLY in
     [Oo]* ) osascript -e 'tell app "loginwindow" to «event aevtrrst»'; echo "Restart yourself if your computer didn't restart on its own."; exit;;
