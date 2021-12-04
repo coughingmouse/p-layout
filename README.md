@@ -21,12 +21,17 @@ In case the above does not run (i.e. if curl is not installed), try this instead
 sh -c "$(wget -q https://github.com/coughingmouse/p-layout/raw/main/xkb-version/install.sh -O -)"
 ```
 ### For **Windows** users, 
-I uploaded the layout I've made with Microsoft Keyboard Layout Creator, a downloadable app. Download the repository (there should be a button named "Code" if you're on the right webpage, which unintuitively gives an option to download it as a zip file) and place the p_en folder where you want to put it permanently. Open it. You should see an executable file. **DO NOT** delete anything in the downloaded repository until you delete the layout with the same executable file. Okay, now you're safe to run the executable. After uninstalling it, you can delete the folder. Note that spacebar cannot be used for non-space letters without using IME, which MKLC is not for, so the underscore is placed under the escape key. Non-breaking space is not used because when I tried mapping it to shift + space, it caused error everywhere, not just in codes.
+I uploaded the layout I've made with Microsoft Keyboard Layout Creator, a downloadable app. 
+Note that spacebar cannot be used for non-space letters without using IME, which MKLC is not for, so the underscore is placed under the escape key. Non-breaking space is not used because when I tried mapping it to shift + space, it caused error everywhere, not just in codes.
 
+1. Download the repository (there should be a button named "Code" if you're on the right webpage, which unintuitively gives an option to download it as a zip file)
+2. Place the p_en folder where you want to put it permanently. 
+3. Open it. You should see an executable file. **DO NOT** delete anything in the downloaded repository until you delete the layout with the same executable file. 
+4. Okay, now you're safe to run the executable. After uninstalling it, you can delete the enclosing folder. 
 
 ## P layout
 ###  Default layout
-```
+```the
 ⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12  ⌽
 0  1  2  3  4  5  6  7  8  9  (  )  =  ⌫
 ⇥  q  w  e  r  p  y  u  t  o  '  -  +  \
