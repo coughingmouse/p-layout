@@ -108,11 +108,15 @@ Because they are not interchangable in any specific language, afaik.
 
 * How can I try this?
 
-For Windows, I uploaded the layout I've made with Microsoft Keyboard Layout Creator, a downloadable app. Download the repository as a zip file and open p_en folder. You should see an executable file. Run it and **DO NOT** delete anything in the downloaded repository until you delete the layout with the same executable file. Note that spacebar cannot be used for non-space letters without using IME, which MKLC is not for, so the underscore is placed under the escape key. Non-breaking space is not used because when I tried mapping it to shift + space, it caused error everywhere, not just in codes.
+For **Windows**, I uploaded the layout I've made with Microsoft Keyboard Layout Creator, a downloadable app. Download the repository as a zip file and open p_en folder. You should see an executable file. Run it and **DO NOT** delete anything in the downloaded repository until you delete the layout with the same executable file. Note that spacebar cannot be used for non-space letters without using IME, which MKLC is not for, so the underscore is placed under the escape key. Non-breaking space is not used because when I tried mapping it to shift + space, it caused error everywhere, not just in codes.
 
-On Mac, I uploaded the layout I made with an amazing app called Ukelele on this repository. You should somehow place the buldle file at "/Library/Keyboard Layouts" (or at "~/Library/Keyboard Layouts" if you want to install the keyboard for a specific user) so that the layout can be used on the device before (and on the password dialogs) and after login. sudo touch the Keyboard Layouts folder to inform Mac that you did something to your keyboard layout. You should restart your computer after that; logging out and back in won't do. Then you will have to somehow add it to your list of layouts as well as make it default for user and for the login screen. To uninstall, remove the file and touch the parent folder again. This all could probably be automated, but I'm too lazy to make a script. Maybe you can help?
+On **macOS**, try the following code on a terminal app.
+```zsh
+zsh $(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/macOS-version/install.sh)"
+```
+The layout is with an amazing app called Ukelele. Installing for everyone enables it on the device before (and on the password dialogs) and after login. After installation, you will have to enable it by somehow adding it to your list of layouts as well as make it default for user and for the login screen. To uninstall,run the installer again.
 
-For Linux and BSDs, I uploaded the thingy I now use to install the layout. The following "replaces" current keyboard with Qwerpy or the default us layout on X11 or Wayland. Try running it.
+For *Linux and BSDs*, I uploaded the thingy I now use to install the layout. The following "replaces" current keyboard with Qwerpy or the default us layout on X11 or Wayland(or i.e. ones that respect xkb). Try running it.
 ```sh
 sh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/xkb-version/install.sh)"
 ```
