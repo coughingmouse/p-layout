@@ -11,8 +11,8 @@ zsh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/macOS-ve
 ```
 The layout is with an amazing app called Ukelele. Installing for everyone enables it on the device before (and on the password dialogs) and after login. After installation, you will have to enable it by somehow adding it to your list of layouts as well as make it default for user and for the login screen. To uninstall,run the installer again.
 
-### For *Linux and BSDs*, 
-I uploaded the thingy I now use to install the layout. The following "replaces" current keyboard with Qwerpy or the default us layout on X11 or Wayland(or i.e. ones that respect xkb). Try running it.
+### For **Linux and BSDs**, 
+I uploaded the thingy I now use to install the layout. Note that it will not work on vt, which you are likely using on BSDs. The following "replaces" current keyboard with Qwerpy or the default us layout on X11 or Wayland(or i.e. ones that respect xkb). Try running it. I've only tested it on Pop!\_OS, Fedora, and Debian, but it should work almost everywhere.
 ```sh
 sh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/xkb-version/install.sh)"
 ```
