@@ -3,7 +3,7 @@
 Two easy-to-learn and intuitive layouts: one for English speakers who overtype t's (thanks to the way we write th and th, yes, the other th) and another for the rest of the world (especially Chinese, where i is used very often).
 
 ## P layout
-###  Default layout (Qwerpy)
+###  Default layout
 ```
 ⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12  ⌽
 0  1  2  3  4  5  6  7  8  9  (  )  =  ⌫
@@ -45,7 +45,7 @@ fn ⎈  ⌘  ⎇  _  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 * Note that _ is typed with ⇧ + 0 instead on Windows, due to the limitation of the implementation method. There, the interpunct is not typable for now. 
 
 ## Usage
-Put your fingers on [awef jtop] or [awef jtoi]. That is your home row.
+Put your fingers on [awef jtoi](or [awef jtop], on the international version). That is your home row.
 You now use your right pinky to type alphabet without twisting your ankle.
 
 ## Characteristics
@@ -57,7 +57,7 @@ You now use your right pinky to type alphabet without twisting your ankle.
 ### Cons
 * If you are not trying to learn a new layout, this will take some, although minimal, time to get used to.
 
-
+<!--
 ## Introduction
 ### 0
 #### 0.0
@@ -66,7 +66,7 @@ Learning keyboard layout always sucks.
 Learning Qwerty sucked. But you got away with it.
 Learning Dvorak sucks because you have to relearn everything anyway.
 TBH you only need to replace P (and T if you are an English user).
-If you already learned Dvorak, it still sucks because you can't use copy--paste intuitively, nor play games without tweaking settings every time.
+If you already learned Dvorak, it still sucks because you can't use copy-paste intuitively, nor play games without tweaking settings every time.
 
 #### 0.1
 If you think about it, the position of the special letters suck. Not intuitive nor useful.
@@ -77,7 +77,7 @@ All ergonomic keyboards suck as well, because you either have to relearn typing 
 
 ### 1
 What if we could (at least partially) fix all this? With barely any effort?
-
+-->
 
 
 
@@ -89,9 +89,10 @@ What if we could (at least partially) fix all this? With barely any effort?
 * Use sane home row
 * Work with any ISO compatible keyboard layout (European, US, KR types considered; but JP type to be considered optionally)
 * Be as conservative as possible so that normal people may "actually" use it
-* (International English specific) Move T to the home row
+* (English specific) Move T to the home row
 
 ## Possibly FAQ
+<!--
 * Why are the positions of / and \ still quite arbitrary?
 
 To US keyboard users, yes, it may seem rather arbitrary. But for others, it may look symmatric, because \ is placed elsewhere.
@@ -103,6 +104,7 @@ Because no one uses it tbh. At least now it's on the right side of the keyboard 
 * Why not put - and ~ together?
 
 Because they are not interchangable in any specific language, afaik.
+-->
 
 * How can I try this?
 
@@ -110,5 +112,12 @@ For Windows, I uploaded the layout I've made with Microsoft Keyboard Layout Crea
 
 On Mac, I uploaded the layout I made with Ukelele on this repository. You should somehow place the buldle file at "/Library/Keyboard Layouts" (or at "~/Library/Keyboard Layouts" if you want to install the keyboard for a specific user) so that the layout can be used on the device before (and on the password dialogs) and after login. sudo touch the Keyboard Layouts folder to inform Mac that you did something to your keyboard layout. You should restart your computer after that; logging out and back in won't do. Then you will have to somehow add it to your list of layouts as well as make it default for user and for the login screen. To uninstall, remove the file and touch the parent folder again. This all could probably be automated, but I'm too lazy to make a script. Maybe you can help?
 
-For Linux and BSDs, I [uploaded](https://github.com/coughingmouse/p-layout-linux) the thingy I now use to install the layout on a different repository. Maybe I should move that here?
+For Linux and BSDs, I uploaded the thingy I now use to install the layout. The following "replaces" current keyboard with Qwerpy or the default us layout on X11 or Wayland. Try running it.
+```sh
+sh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/xkb-version/install.sh)"
+```
+In case the above does not run (i.e. if curl is not installed), try this instead:
+```sh
+sh -c "$(wget -q https://github.com/coughingmouse/p-layout/raw/main/xkb-version/install.sh -O -)"
+```
 
