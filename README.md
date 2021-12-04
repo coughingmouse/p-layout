@@ -23,7 +23,7 @@ fn ⎈  ⌘  ⎇  _  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 <!--- template for keyboard borrowed from the [yak-layout](https://github.com/wincent/yak-layout/blob/master/README.md) -->
 <!--- symbols are put according to https://jdebp.uk/FGA/iso-9995-7-symbols.html -->
 
-### P International layout
+### (International) P layout
 ```
 ⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12  ⌽
 0  1  2  3  4  5  6  7  8  9  (  )  =  ⌫
