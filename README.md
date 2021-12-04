@@ -108,15 +108,15 @@ Because they are not interchangable in any specific language, afaik.
 
 * How can I try this?
 
-For **Windows**, I uploaded the layout I've made with Microsoft Keyboard Layout Creator, a downloadable app. Download the repository as a zip file and open p_en folder. You should see an executable file. Run it and **DO NOT** delete anything in the downloaded repository until you delete the layout with the same executable file. Note that spacebar cannot be used for non-space letters without using IME, which MKLC is not for, so the underscore is placed under the escape key. Non-breaking space is not used because when I tried mapping it to shift + space, it caused error everywhere, not just in codes.
-
-On **macOS**, try the following code on a terminal app.
+#### On **macOS**, 
+try the following code on a terminal app. Copy it, open the terminal, paste it, and hit enter. Actually, that's a bad idea. Don't do it, kids. It's dangerous. Who knows, it may run all sorts of malicious code on your behalf!
 ```zsh
 zsh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/macOS-version/install.sh)"
 ```
 The layout is with an amazing app called Ukelele. Installing for everyone enables it on the device before (and on the password dialogs) and after login. After installation, you will have to enable it by somehow adding it to your list of layouts as well as make it default for user and for the login screen. To uninstall,run the installer again.
 
-For *Linux and BSDs*, I uploaded the thingy I now use to install the layout. The following "replaces" current keyboard with Qwerpy or the default us layout on X11 or Wayland(or i.e. ones that respect xkb). Try running it.
+#### For *Linux and BSDs*, 
+I uploaded the thingy I now use to install the layout. The following "replaces" current keyboard with Qwerpy or the default us layout on X11 or Wayland(or i.e. ones that respect xkb). Try running it.
 ```sh
 sh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/xkb-version/install.sh)"
 ```
@@ -124,4 +124,5 @@ In case the above does not run (i.e. if curl is not installed), try this instead
 ```sh
 sh -c "$(wget -q https://github.com/coughingmouse/p-layout/raw/main/xkb-version/install.sh -O -)"
 ```
-
+#### For **Windows** users, 
+I uploaded the layout I've made with Microsoft Keyboard Layout Creator, a downloadable app. Download the repository (there should be a button named "Code" if you're on the right webpage, which unintuitively gives an option to download it as a zip file) and place the p_en folder where you want to put it permanently. Open it. You should see an executable file. **DO NOT** delete anything in the downloaded repository until you delete the layout with the same executable file. Okay, now you're safe to run the executable. After uninstalling it, you can delete the folder. Note that spacebar cannot be used for non-space letters without using IME, which MKLC is not for, so the underscore is placed under the escape key. Non-breaking space is not used because when I tried mapping it to shift + space, it caused error everywhere, not just in codes.
