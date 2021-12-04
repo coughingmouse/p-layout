@@ -112,7 +112,7 @@ For **Windows**, I uploaded the layout I've made with Microsoft Keyboard Layout 
 
 On **macOS**, try the following code on a terminal app.
 ```zsh
-zsh $(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/macOS-version/install.sh)"
+zsh "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/macOS-version/install.sh)"
 ```
 The layout is with an amazing app called Ukelele. Installing for everyone enables it on the device before (and on the password dialogs) and after login. After installation, you will have to enable it by somehow adding it to your list of layouts as well as make it default for user and for the login screen. To uninstall,run the installer again.
 
