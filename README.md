@@ -1,30 +1,9 @@
 # P Layout
 
-Two easy-to-learn and intuitive layouts: one for everyone and another for English speakers who overtype Ts.
+Two easy-to-learn and intuitive layouts: one for English speakers who overtype t's (thanks to the way we write th and th, yes, the other th) and another for the rest of the world (especially Chinese, where i is used very often).
 
 ## P layout
-### Default layout
-```
-⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12  ⌽
-0  1  2  3  4  5  6  7  8  9  (  )  =  ⌫
-⇥  q  w  e  r  t  y  u  i  o  '  -  +  \
-⇪   a  s  d  f  g  h  j  k  l  p  ;    ↩
-⇧    z  x  c  v  b  n  m  ,  .  /      ⇧
-fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
-```
-```
-⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12  ⌽
-·  |  @  #  $  %  ^  &  *  `  [  ]  ~  ⌫
-⇥  Q  W  E  R  T  Y  U  I  O  "  {  }  !
-⇪   A  S  D  F  G  H  J  K  L  P  :    ↩
-⇧    Z  X  C  V  B  N  M  <  >  ?      ⇧
-fn ⎈  ⌘  ⎇  _  ⇮  ⌘  ⎈  ←  ↓  ↑  →
-```
-
-<!--- template for keyboard borrowed from the [yak-layout](https://github.com/wincent/yak-layout/blob/master/README.md) -->
-<!--- symbols are put according to https://jdebp.uk/FGA/iso-9995-7-symbols.html -->
-
-### International English layout (Qwerpy)
+###  Default layout (Qwerpy)
 ```
 ⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12  ⌽
 0  1  2  3  4  5  6  7  8  9  (  )  =  ⌫
@@ -41,9 +20,29 @@ fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ⇧    Z  X  C  V  B  N  M  <  >  ?      ⇧
 fn ⎈  ⌘  ⎇  _  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
+<!--- template for keyboard borrowed from the [yak-layout](https://github.com/wincent/yak-layout/blob/master/README.md) -->
+<!--- symbols are put according to https://jdebp.uk/FGA/iso-9995-7-symbols.html -->
+
+### P International layout
+```
+⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12  ⌽
+0  1  2  3  4  5  6  7  8  9  (  )  =  ⌫
+⇥  q  w  e  r  t  y  u  i  o  '  -  +  \
+⇪   a  s  d  f  g  h  j  k  l  p  ;    ↩
+⇧    z  x  c  v  b  n  m  ,  .  /      ⇧
+fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
+```
+```
+⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12  ⌽
+·  |  @  #  $  %  ^  &  *  `  [  ]  ~  ⌫
+⇥  Q  W  E  R  T  Y  U  I  O  "  {  }  !
+⇪   A  S  D  F  G  H  J  K  L  P  :    ↩
+⇧    Z  X  C  V  B  N  M  <  >  ?      ⇧
+fn ⎈  ⌘  ⎇  _  ⇮  ⌘  ⎈  ←  ↓  ↑  →
+```
 <!---  template for keyboard borrowed from the [yak-layout](https://github.com/wincent/yak-layout/blob/master/README.md) -->
 
-* Note that _ is typed with ⇧ + 0 instead on Windows.
+* Note that _ is typed with ⇧ + 0 instead on Windows, due to the limitation of the implementation method. There, the interpunct is not typable for now. 
 
 ## Usage
 Put your fingers on [awef jtop] or [awef jtoi]. That is your home row.
