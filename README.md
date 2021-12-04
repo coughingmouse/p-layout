@@ -2,6 +2,28 @@
 
 Two easy-to-learn and intuitive layouts: one for English speakers who overtype t's (thanks to the way we write th and th, yes, the other th) and another for the rest of the world (especially Chinese, where i is used very often).
 
+## Installation
+
+### On **macOS**, 
+try the following code on a terminal app. Copy it, open the terminal, paste it, and hit enter. Actually, that's a bad idea. Don't do it, kids. It's dangerous. Who knows, it may run all sorts of malicious code on your behalf!
+```zsh
+zsh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/macOS-version/install.sh)"
+```
+The layout is with an amazing app called Ukelele. Installing for everyone enables it on the device before (and on the password dialogs) and after login. After installation, you will have to enable it by somehow adding it to your list of layouts as well as make it default for user and for the login screen. To uninstall,run the installer again.
+
+### For *Linux and BSDs*, 
+I uploaded the thingy I now use to install the layout. The following "replaces" current keyboard with Qwerpy or the default us layout on X11 or Wayland(or i.e. ones that respect xkb). Try running it.
+```sh
+sh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/xkb-version/install.sh)"
+```
+In case the above does not run (i.e. if curl is not installed), try this instead:
+```sh
+sh -c "$(wget -q https://github.com/coughingmouse/p-layout/raw/main/xkb-version/install.sh -O -)"
+```
+### For **Windows** users, 
+I uploaded the layout I've made with Microsoft Keyboard Layout Creator, a downloadable app. Download the repository (there should be a button named "Code" if you're on the right webpage, which unintuitively gives an option to download it as a zip file) and place the p_en folder where you want to put it permanently. Open it. You should see an executable file. **DO NOT** delete anything in the downloaded repository until you delete the layout with the same executable file. Okay, now you're safe to run the executable. After uninstalling it, you can delete the folder. Note that spacebar cannot be used for non-space letters without using IME, which MKLC is not for, so the underscore is placed under the escape key. Non-breaking space is not used because when I tried mapping it to shift + space, it caused error everywhere, not just in codes.
+
+
 ## P layout
 ###  Default layout
 ```
@@ -91,38 +113,5 @@ What if we could (at least partially) fix all this? With barely any effort?
 * Be as conservative as possible so that normal people may "actually" use it
 * (English specific) Move T to the home row
 
-## Possibly FAQ
-<!--
-* Why are the positions of / and \ still quite arbitrary?
-
-To US keyboard users, yes, it may seem rather arbitrary. But for others, it may look symmatric, because \ is placed elsewhere.
-
-* Why is the position of ` as arbitrary as it was before?
-
-Because no one uses it tbh. At least now it's on the right side of the keyboard along with all the other accents.
-
-* Why not put - and ~ together?
-
-Because they are not interchangable in any specific language, afaik.
--->
-
-* How can I try this?
-
-#### On **macOS**, 
-try the following code on a terminal app. Copy it, open the terminal, paste it, and hit enter. Actually, that's a bad idea. Don't do it, kids. It's dangerous. Who knows, it may run all sorts of malicious code on your behalf!
-```zsh
-zsh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/macOS-version/install.sh)"
-```
-The layout is with an amazing app called Ukelele. Installing for everyone enables it on the device before (and on the password dialogs) and after login. After installation, you will have to enable it by somehow adding it to your list of layouts as well as make it default for user and for the login screen. To uninstall,run the installer again.
-
-#### For *Linux and BSDs*, 
-I uploaded the thingy I now use to install the layout. The following "replaces" current keyboard with Qwerpy or the default us layout on X11 or Wayland(or i.e. ones that respect xkb). Try running it.
-```sh
-sh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/xkb-version/install.sh)"
-```
-In case the above does not run (i.e. if curl is not installed), try this instead:
-```sh
-sh -c "$(wget -q https://github.com/coughingmouse/p-layout/raw/main/xkb-version/install.sh -O -)"
-```
-#### For **Windows** users, 
-I uploaded the layout I've made with Microsoft Keyboard Layout Creator, a downloadable app. Download the repository (there should be a button named "Code" if you're on the right webpage, which unintuitively gives an option to download it as a zip file) and place the p_en folder where you want to put it permanently. Open it. You should see an executable file. **DO NOT** delete anything in the downloaded repository until you delete the layout with the same executable file. Okay, now you're safe to run the executable. After uninstalling it, you can delete the folder. Note that spacebar cannot be used for non-space letters without using IME, which MKLC is not for, so the underscore is placed under the escape key. Non-breaking space is not used because when I tried mapping it to shift + space, it caused error everywhere, not just in codes.
+## Answers to some possible questions
+are at the [wiki](https://github.com/coughingmouse/p-layout/wiki#answers-to-some-possible-questions).
