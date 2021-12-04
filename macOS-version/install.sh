@@ -11,7 +11,7 @@ location4Me="~/Library/Keyboard Layouts"
 
 # Ask to install
 while true; do
-  echo "For who do you want to install? (Everyone/Me/Uninstall/Abort)"
+  echo "For who do you want to install? (Everyone(recommended)/Me/Uninstall/Abort)"
   read -r REPLY
   case $REPLY in
     [Ee]* ) wouldLikeToRemove=false; installLocation=$location4All; sudoComesHere="sudo"; break;;
