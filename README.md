@@ -94,7 +94,7 @@ fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ⇪   A  S  D  F  G  H  J  K  L  I  :    ↩
 ⇧    Z  X  C  V  B  N  M  <  >  ?      ⇧
 fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
-```
+
 ```
 ### Minimalistic P layout
 ```
@@ -113,8 +113,6 @@ fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ⇧    Z  X  C  V  B  N  M  <  >  ?      ⇧
 fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
-```
-
 
 ## Usage
 Put your fingers on [awef jtoi](or [awef jtop], on the international version). That is your home row.
