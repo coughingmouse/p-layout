@@ -8,7 +8,7 @@ Four easy-to-learn and intuitive layouts made using the concept of a better home
 
 * Supported layout: English (Default), International
 
-Try the following code on a terminal app. Copy it, open the terminal, paste it, and hit enter. Actually, that's a bad idea. Don't do it, kids. It's dangerous. Who knows, it may run all sorts of malicious code on your behalf!
+Try the following code on a terminal app. Copy it, open the terminal, paste it, and hit enter.
 ```zsh
 zsh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/macOS-version/install.sh)"
 ```
@@ -16,9 +16,11 @@ The layout is with an amazing app called Ukelele. Installing for everyone enable
 
 ### Linux (and BSDs?)
 
+Note that this layout is not implemented correctly, although it does have every feature it needs. 
+
 * Supported layouts: English (Default), International, Conservative, Minimalistic
 
-I uploaded the thingy I now use to install the layout. Note that it will not work on vt, which you are likely using on BSDs. **You need to be using us or us altgr-intl layouti** on X11 or Wayland (or i.e. ones that respect xkb). Try running it. I've only tested it on Pop!\_OS, Fedora, and Debian, but it should work almost everywhere.
+I uploaded the thingy I now use to install the layout [here](https://github.com/coughingmouse/p-layout/tree/main/xkb-version). Note that it will not work on vt, which you are likely using on BSDs. **You need to be using us or us altgr-intl layouti** on X11 or Wayland (or i.e. ones that respect xkb). Try running it. I've only tested it on Pop!\_OS, Fedora, and Debian, but it should work almost everywhere.
 ```sh
 sh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/xkb-version/install.sh)"
 ```
