@@ -16,9 +16,9 @@ The layout is with an amazing app called Ukelele. Installing for everyone enable
 
 ### Linux (and BSDs?)
 
-* Supported layouts: English (Default), International
+* Supported layouts: English (Default), International, Conservative, Minimalistic
 
-I uploaded the thingy I now use to install the layout. Note that it will not work on vt, which you are likely using on BSDs. The following "replaces" current keyboard with Qwerpy or the default us layout on X11 or Wayland(or i.e. ones that respect xkb). Try running it. I've only tested it on Pop!\_OS, Fedora, and Debian, but it should work almost everywhere.
+I uploaded the thingy I now use to install the layout. Note that it will not work on vt, which you are likely using on BSDs. **You need to be using us or us altgr-intl layouti** on X11 or Wayland (or i.e. ones that respect xkb). Try running it. I've only tested it on Pop!\_OS, Fedora, and Debian, but it should work almost everywhere.
 ```sh
 sh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/xkb-version/install.sh)"
 ```
@@ -79,6 +79,7 @@ fn ⎈  ⌘  ⎇  _  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 * Note that _ is typed with ⇧ + 0 instead on Windows, due to the limitation of the implementation method. There, the interpunct is not typable for now. 
 
 ### Conservative English P layout
+Only 5 keys are different from Qwerty: i, t, p, ;, '.
 ```
 ⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12
 ` 1  2  3  4  5  6  7  8  9  0  -  =   ⌫
@@ -97,6 +98,7 @@ fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 
 ```
 ### Minimalistic P layout
+Only 3 keys are different from Qwerty: p, ;, '.
 ```
 ⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12
 ` 1  2  3  4  5  6  7  8  9  0  -  =   ⌫
