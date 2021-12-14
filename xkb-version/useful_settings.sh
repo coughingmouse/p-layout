@@ -41,30 +41,18 @@ if [ "$(gsettings get org.gnome.desktop.input-sources xkb-options)" ]; then
 fi
 
 # Use fn key to access ibus emoji
-if [ "$(gsettings get desktop.ibus.panel.emoji hotkey)" ]; then
-  hotkey=$(gsettings get desktop.ibus.panel.emoji hotkey)
+# Note that the value changed is actually at desktop.ibus.panel.emoji
+if [ "$(gsettings get org.freedesktop.ibus.panel.emoji hotkey)" ]; then
+  hotkey=$(gsettings get org.freedesktop.ibus.panel.emoji hotkey)
   if [ ! "$(echo "$hotkey" | grep 'WakeUp')" ]; then
     if [ "$hotkey" = "@as []" ]; then
       hotkey="['WakeUp']"
-      gsettings set desktop.ibus.panel.emoji hotkey "$hotkey"
+      gsettings set org.freedesktop.ibus.panel.emoji hotkey "$hotkey"
     else
       hotkey="$(echo "$hotkey" | sed 's/.$//'), 'WakeUp']"
-      gsettings set desktop.ibus.panel.emoji hotkey "$hotkey"
+      gsettings set org.freedesktop.ibus.panel.emoji hotkey "$hotkey"
     fi
   fi
   echo "Now fn key acts as a emoji picker, too."
 fi
-#if [ "$(gsettings get org.freedesktop.ibus.panel.emoji hotkey)" ]; then
-#  hotkey=$(gsettings get org.freedesktop.ibus.panel.emoji hotkey)
-#  if [ ! "$(echo "$hotkey" | grep 'WakeUp')" ]; then
-#    if [ "$hotkey" = "@as []" ]; then
-#      hotkey="['WakeUp']"
-#      gsettings set org.freedesktop.ibus.panel.emoji hotkey "$hotkey"
-#    else
-#      hotkey="$(echo "$hotkey" | sed 's/.$//'), 'WakeUp']"
-#      gsettings set org.freedesktop.ibus.panel.emoji hotkey "$hotkey"
-#    fi
-#  fi
-#  echo "Now fn key acts as a emoji picker, too."
-#fi
 
