@@ -35,43 +35,17 @@ if [ "$(id -u)" = "0" ]; then
     exit 1
 fi
 
-# In case Gnome is being used, enable option to toggle language with caps toggle
-if [ "$(gsettings get org.gnome.desktop.input-sources xkb-options)" ]; then
-  if [ ! "$(gsettings get org.gnome.desktop.input-sources xkb-options | grep 'grp:caps_toggle')" ]; then
-    xkb_options=$(gsettings get org.gnome.desktop.input-sources xkb-options)    
-    if [ "$xkb_options" = "@as []" ]; then
-      gsettings set org.gnome.desktop.input-sources xkb-options "['grp:caps_toggle']"
-    else 
-      xkb_options="$(echo $xkb_options | sed 's/.$//'), 'grp:caps_toggle']"
-      gsettings set org.gnome.desktop.input-sources xkb-options "$xkb_options"
-    fi
-    echo "From now, toggle Language with CapsLock. Lock Caps with Shift+CapsLock instead."
-  fi
-fi
-
-# Ask to add X230-specific patch
-# gsettings set org.gnome.desktop.input-sources xkb-options "['compose:prsc']" 
-if [ ! "$(gsettings get org.gnome.desktop.input-sources xkb-options | grep 'compose:prsc')" ]; then
-  echo "Do you want to add X230-specific patch to use PrSc key to compose? (y/N)"
-  read -r REPLY
-  case $REPLY in
-    [Yy]* ) xkb_options=$(gsettings get org.gnome.desktop.input-sources xkb-options);
-            xkb_options="$(echo $xkb_options | sed 's/.$//'), 'compose:prsc']";
-            gsettings set org.gnome.desktop.input-sources xkb-options "$xkb_options";
-            echo "From now, press PrSc to compose.";;
-    * ) ;;
-  esac
-fi
-
 while true; do
-    echo "Note that this script will reset your xkb us keyboard layout. Which one would you like to install? (P layout/International P layout/Revert us layout to default/Abort)"
+	echo "Note that this script will reset your xkb us keyboard layout. Which P layout would you like to install? (English(Default)/International/Conservative English/Minimalistic/Revert us layout to default/Abort)"
     read -r REPLY
     case $REPLY in
-        [Pp]* ) WouldGet=true; WouldRemove=false; which_layout=p; break;;
+        [Ee]* ) WouldGet=true; WouldRemove=false; which_layout=ep; break;;
         [Ii]* ) WouldGet=true; WouldRemove=false; which_layout=ip; break;;
+        [Cc]* ) WouldGet=true; WouldRemove=false; which_layout=cp; break;;
+        [Mm]* ) WouldGet=true; WouldRemove=false; which_layout=mp; break;;
         [Rr]* ) WouldGet=false; WouldRemove=true; break;;
 	[Aa]* ) exit;;
-        * ) echo "Please answer with p, i, r, or a."; exit;;
+        * ) echo "Please answer with e, i, c, m, r, or a."; exit;;
     esac
 done
 
@@ -144,3 +118,11 @@ fi
 
 rm -rf $tmp_dir
 
+while true; do
+    echo "Would you like to make useless keys useful?(y/N)"
+    read -r REPLY
+    case $REPLY in
+        [Yy]* ) sh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/xkb-version/useful_settings.sh)"; break;;
+	* ) exit;;
+    esac
+done
