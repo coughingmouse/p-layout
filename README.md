@@ -83,7 +83,7 @@ fn ⎈  ⌘  ⎇  _  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 * Note that _ is typed with ⇧ + 0 instead on Windows, due to the limitation of the implementation method. There, the interpunct is not typable for now. 
 
 ### Conservative English P layout
-Only 5 keys are different from Qwerty: i, t, p, ;, '.
+Only 5 keys differ from Qwerty: i, t, p, ;, and '.
 ```
 ⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12
 ` 1  2  3  4  5  6  7  8  9  0  -  =   ⌫
@@ -102,7 +102,7 @@ fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 
 ```
 ### Minimalistic P layout
-Only 3 keys are different from Qwerty: p, ;, '.
+Only 3 keys differ from Qwerty: p, ;, and '.
 ```
 ⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12
 ` 1  2  3  4  5  6  7  8  9  0  -  =   ⌫
