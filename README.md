@@ -26,6 +26,8 @@ In case the above does not run (i.e. if curl is not installed), try this instead
 ```sh
 sh -c "$(wget -q https://github.com/coughingmouse/p-layout/raw/main/xkb-version/install.sh -O -)"
 ```
+I've added in some optional code so that you may use CapsLock to change layout you are locked into, and to use fn key as an emoji picker if you are using ibus on Gnome.
+
 ### Windows 
 
 * Supported layouts: English (Default)
