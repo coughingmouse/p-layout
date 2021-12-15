@@ -37,7 +37,7 @@ I've added in some optional code so that you may use CapsLock to change layout y
 I released the layouts I've made with Microsoft Keyboard Layout Creator, a downloadable app. You can build dll and setup the package using the aforementioned software.
 Note that spacebar cannot be used for non-space letters without using IME, which MKLC is not for, so the underscore is placed under the escape key. Non-breaking space is not used because when I tried mapping it to shift + space, it caused error everywhere, not just in codes.
 
-1. Download from the release page of this repository, which unintuitively gives an option to download a zip file.
+1. Download from the [release page](https://github.com/coughingmouse/p-layout/releases/) of this repository, which unintuitively gives an option to download a zip file.
 2. Place and unzip to the ```yourchoice_p``` folder where you want to put it permanently. 
 3. Open the folder. You should see an executable file. **DO NOT** delete anything in the downloaded repository until you delete the layout with the same executable file. 
 4. Okay, now you're safe to run the executable. After uninstalling it, you can delete the enclosing folder. 
