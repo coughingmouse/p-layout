@@ -1,6 +1,8 @@
 # P Layout
 
-Four easy-to-learn and intuitive layouts made using the concept of a better home row: one for English speakers who overtype t's (thanks to the way we write th and th, yes, the other th) another for the rest of the world (especially Chinese, where i is used very often), and two more for those who are too used to the special letters on Qwerty.
+Four easy-to-learn and ***intuitive layouts*** made using the concept of a ***better home row***: one for English speakers who overtype t's (thanks to the way we write th and th, yes, the other th) another for the rest of the world (especially Chinese, where i is used very often), and two more for those who are too used to the special letters on Qwerty.
+
+If you believe changing layouts just isn't enough for your needs, go check out [Plover](http://www.openstenoproject.org/) which is a libre software enabling chorded input (e.g. ```h```+ ```e```+ ```l``` + ```o``` pressed at the same time types "hello"), as well as the keyboards and key switches from [Wooting](https://wooting.io/) which enables analog input from key switches! With the combination of these, there is little we can't do.
 
 ## Installation
 
@@ -121,7 +123,10 @@ fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
 
 ## Usage
-Put your fingers on [awef jtoi](or [awef jtop], on the international version). That is your home row.
+**Put your fingers on ```awef jtoi```(or ```awef jtop```, on the international/minimalistic version). That is your home row.** On Qwerty, this would be ```awef jio;```.
+
+![ortholinear layout with awef jio; colored](https://precondition.github.io/assets/images/home-row-mods/PlanckAlternative-FauxColStagger.jpeg)
+<image from [Precondition's home row mod](https://precondition.github.io/home-row-mods) which has taken an equivalent motive independently developed from my approach to a different conclusion>
 
 You now use your right pinky to type alphabet without twisting your ankle.
 Now you should practice with your new layout. If you're not familiar with typing English, you should start [practicing typing n-grams](https://ranelpadon.github.io/ngram-type/).
