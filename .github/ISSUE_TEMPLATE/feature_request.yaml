@@ -1,0 +1,9 @@
+name: Feature request 기능 제안
+about: Freely state your opinions. 자유롭게 자신의 의견을 적어주세요.
+title: ''
+labels: enhancement
+assignees: ''
+
+body:
+    - type: textarea
+      label: Freely state your opinions. 자유롭게 자신의 의견을 적어주세요.
