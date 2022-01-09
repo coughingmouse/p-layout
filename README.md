@@ -126,6 +126,7 @@ fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 **Put your fingers on ```awef jtoi```(or ```awef jtop```, on the international/minimalistic version). That is your home row.** On Qwerty, this would be ```awef jio;```.
 
 ![ortholinear layout with awef jio; colored](https://precondition.github.io/assets/images/home-row-mods/PlanckAlternative-FauxColStagger.jpeg)
+
 <image from [Precondition's home row mod](https://precondition.github.io/home-row-mods) which has taken an equivalent motive independently developed from my approach to a different conclusion>
 
 You now use your right pinky to type alphabet without twisting your ankle.
