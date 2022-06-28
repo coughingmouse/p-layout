@@ -34,6 +34,8 @@ I've added in some optional code so that you may use CapsLock to change layout y
 
 ### Windows 
 
+#### *NOT RECOMMENDED FOR USE: problems likely occur when uninstalling*
+
 * Supported layouts: English (Default), International, Conservative, Minimalistic
 
 I released the layouts I've made with Microsoft Keyboard Layout Creator, a downloadable app. You can build dll and setup the package using the aforementioned software.
