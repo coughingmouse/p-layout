@@ -1,5 +1,7 @@
 # P Layout
+Better typing experience for traditional staggered keyboards
 
+## Introduction
 Four easy-to-learn and ***intuitive layouts*** made using the concept of a ***better home row***: one for English speakers who overtype t's (thanks to the way we write th and th, yes, the other th) another for the rest of the world (especially Chinese, where i is used very often), and two more for those who are too used to the special letters on Qwerty.
 
 If you believe changing layouts just isn't enough for your needs, go check out [Plover](http://www.openstenoproject.org/) which is a libre software enabling chorded input (e.g. ```h```+ ```e```+ ```l``` + ```o``` pressed at the same time types "hello"), as well as the keyboards and key switches from [Wooting](https://wooting.io/) which enables analog input from key switches! With the combination of these, there is little we can't do.
