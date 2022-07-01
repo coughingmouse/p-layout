@@ -3,6 +3,7 @@
 Instantly better typing experience for traditional staggered keyboards
 
 ![keyboard-layout](https://user-images.githubusercontent.com/15174845/176397006-17f284e7-e925-4db7-82d9-8a601e609bda.jpg)
+![heatmap](https://user-images.githubusercontent.com/15174845/176935465-2e9fb1c7-6438-432b-9575-05b04ca69ef4.png)
 
 ## Introduction
 
