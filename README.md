@@ -2,10 +2,13 @@
 
 Instantly better typing experience for traditional staggered keyboards
 
-![keyboard-layout](https://user-images.githubusercontent.com/15174845/176397006-17f284e7-e925-4db7-82d9-8a601e609bda.jpg)
-<image generated with [Ian Prest](https://github.com/ijprest)'s [keyboard-layout-editor](http://www.keyboard-layout-editor.com/)>
-![heatmap](https://user-images.githubusercontent.com/15174845/176935465-2e9fb1c7-6438-432b-9575-05b04ca69ef4.png)
-<image we generated with [SteveP's fork](https://stevep99.github.io/keyboard-layout-analyzer/) of [Patrick Gillespie and other contributors](https://github.com/patorjk/keyboard-layout-analyzer/graphs/contributors)' [keyboard-layout-analyzer](https://patorjk.com/keyboard-layout-analyzer/)>
+| ![keyboard-layout](https://github.com/coughingmouse/p-layout/blob/main/kle/english-p.jpg?raw=true) |
+|:--:|
+| Image generated with [Ian Prest](https://github.com/ijprest)'s [keyboard-layout-editor](http://www.keyboard-layout-editor.com/) |
+
+| ![heatmap](https://user-images.githubusercontent.com/15174845/176935465-2e9fb1c7-6438-432b-9575-05b04ca69ef4.png) |
+|:--:|
+| Image we generated with [SteveP's fork](https://stevep99.github.io/keyboard-layout-analyzer/) of [Patrick Gillespie and other contributors](https://github.com/patorjk/keyboard-layout-analyzer/graphs/contributors)' [keyboard-layout-analyzer](https://patorjk.com/keyboard-layout-analyzer/) |
 
 ## Introduction
 
@@ -89,9 +92,13 @@ fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 fn ⎈  ⌘  ⎇  _  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 ```
 <!--- template for keyboard borrowed from the [yak-layout](https://github.com/wincent/yak-layout/blob/master/README.md) -->
-<!--- symbols are put according to https://jdebp.uk/FGA/iso-9995-7-symbols.html -->
+<!--- symbols are selected according to https://jdebp.uk/FGA/iso-9995-7-symbols.html -->
 
 ### International P layout
+
+| ![keyboard-layout](https://github.com/coughingmouse/p-layout/blob/main/kle/international-p.jpg?raw=true) |
+|:--:|
+| Image generated with [Ian Prest](https://github.com/ijprest)'s [keyboard-layout-editor](http://www.keyboard-layout-editor.com/) |
 
 ```text
 ⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12
