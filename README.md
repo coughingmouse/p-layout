@@ -3,7 +3,9 @@
 Instantly better typing experience for traditional staggered keyboards
 
 ![keyboard-layout](https://user-images.githubusercontent.com/15174845/176397006-17f284e7-e925-4db7-82d9-8a601e609bda.jpg)
+<image generated with [Ian Prest](https://github.com/ijprest)'s [keyboard-layout-editor](http://www.keyboard-layout-editor.com/)>
 ![heatmap](https://user-images.githubusercontent.com/15174845/176935465-2e9fb1c7-6438-432b-9575-05b04ca69ef4.png)
+<image we generated with [SteveP's fork](https://stevep99.github.io/keyboard-layout-analyzer/) of [Patrick Gillespie and other contributors](https://github.com/patorjk/keyboard-layout-analyzer/graphs/contributors)' [keyboard-layout-analyzer](https://patorjk.com/keyboard-layout-analyzer/)>
 
 ## Introduction
 
@@ -35,7 +37,7 @@ The layout is with an amazing app called Ukelele. Installing for everyone enable
 
 Note that this layout is not implemented correctly, although it does have every feature it needs.
 
-* Supported layouts: English (Default), International, Conservative, Minimalistic
+* Supported layouts: English (Default), International
 
 I uploaded the thingy I now use to install the layout [here](https://github.com/coughingmouse/p-layout/tree/main/xkb-version). Note that it will not work on vt, which you are likely using on BSDs. **You need to be using us or us altgr-intl layout** on X11 or Wayland (or i.e. ones that respect xkb). Try running it. I've only tested it on Pop!\_OS, Fedora, and Debian, but it should work almost everywhere.
 
@@ -55,7 +57,7 @@ I've added in some optional code so that you may use CapsLock to change layout y
 
 #### *NOT RECOMMENDED FOR USE: problems likely occur when uninstalling*
 
-* Supported layouts: English (Default), International, Conservative, Minimalistic
+* Supported layouts: English (Default), International
 
 I released the layouts I've made with Microsoft Keyboard Layout Creator, a downloadable app. You can build dll and setup the package using the aforementioned software.
 Note that spacebar cannot be used for non-space letters without using IME, which MKLC is not for, so the underscore is placed under the escape key. Non-breaking space is not used because when I tried mapping it to shift + space, it caused error everywhere, not just in codes.
@@ -111,53 +113,9 @@ fn ⎈  ⌘  ⎇  _  ⇮  ⌘  ⎈  ←  ↓  ↑  →
 
 * Note that _ is typed with ⇧ + 0 instead on Windows, due to the limitation of the implementation method. There, the interpunct is not typable for now.
 
-### Conservative English P layout
-
-Only 5 keys differ from Qwerty: i, t, p, ;, and '.
-
-```text
-⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12
-` 1  2  3  4  5  6  7  8  9  0  -  =   ⌫
-⇥  q  w  e  r  p  y  u  t  o  '  [  ]  \
-⇪   a  s  d  f  g  h  j  k  l  i  ;    ↩
-⇧    z  x  c  v  b  n  m  ,  .  /      ⇧
-fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
-```
-
-```text
-⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12
-~ !  @  #  $  %  ^  &  *  (  )  _  +   ⌫
-⇥  Q  W  E  R  P  Y  U  T  O  "  {  }  |
-⇪   A  S  D  F  G  H  J  K  L  I  :    ↩
-⇧    Z  X  C  V  B  N  M  <  >  ?      ⇧
-fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
-```
-
-### Minimalistic P layout
-
-Only 3 keys differ from Qwerty: p, ;, and '.
-
-```text
-⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12
-` 1  2  3  4  5  6  7  8  9  0  -  =   ⌫
-⇥  q  w  e  r  t  y  u  i  o  '  [  ]  \
-⇪   a  s  d  f  g  h  j  k  l  p  ;    ↩
-⇧    z  x  c  v  b  n  m  ,  .  /      ⇧
-fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
-```
-
-```text
-⎋ F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12
-~ !  @  #  $  %  ^  &  *  (  )  _  +   ⌫
-⇥  Q  W  E  R  T  Y  U  I  O  "  {  }  |
-⇪   A  S  D  F  G  H  J  K  L  P  :    ↩
-⇧    Z  X  C  V  B  N  M  <  >  ?      ⇧
-fn ⎈  ⌘  ⎇  ␣  ⇮  ⌘  ⎈  ←  ↓  ↑  →
-```
-
 ## Usage
 
-**Put your fingers on ```awef jtoi```(or ```awef jtop```, on the international/minimalistic version). That is your home position.** On Qwerty, this would be ```awef jio;```.
+**Put your fingers on ```awef jtoi```(or ```awef jtop```, on the international version). That is your home position.** On Qwerty, this would be ```awef jio;```.
 
 You now use your right pinky to type alphabet without twisting your ankle.
 Now you should practice with your new layout. If you're not familiar with typing English, you should start [practicing typing n-grams](https://ranelpadon.github.io/ngram-type/).
@@ -176,7 +134,8 @@ I would like to add in a custom touch typing tutor software tailored for the new
 
 ### Cons
 
-* If you are not trying to learn a new layout, this will take some, although minimal, time to get used to.
+* If you are not actively trying to learn a new layout, this will take some, although minimal, time to get used to.
+* In situations where you need to type extreme lengths of numerals, left hand is greatly overburdened. But in this case, pretty much every layout with every number on the top row is not very fit, so I advise you use a numpad.
 
 <!--
 ## Motive

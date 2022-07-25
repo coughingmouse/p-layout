@@ -36,16 +36,14 @@ if [ "$(id -u)" = "0" ]; then
 fi
 
 while true; do
-	echo "Note that this script will reset your xkb us keyboard layout. Which P layout would you like to install? (English(Default)/International/Conservative English/Minimalistic/Revert us layout to default/Abort)"
+	echo "Note that this script will reset your xkb us keyboard layout. Which P layout would you like to install? (English(Default)/International/Revert us layout to default/Abort)"
     read -r REPLY
     case $REPLY in
         [Ee]* ) WouldGet=true; WouldRemove=false; which_layout=ep; break;;
         [Ii]* ) WouldGet=true; WouldRemove=false; which_layout=ip; break;;
-        [Cc]* ) WouldGet=true; WouldRemove=false; which_layout=cp; break;;
-        [Mm]* ) WouldGet=true; WouldRemove=false; which_layout=mp; break;;
         [Rr]* ) WouldGet=false; WouldRemove=true; break;;
 	[Aa]* ) exit;;
-        * ) echo "Please answer with e, i, c, m, r, or a."; exit;;
+        * ) echo "Please answer with e, i, r, or a."; exit;;
     esac
 done
 
@@ -119,7 +117,7 @@ fi
 rm -rf $tmp_dir
 
 while true; do
-    echo "Would you like to make useless keys useful?(y/N)"
+    echo "Are you interested in trying out another optional mod? (y/N)"
     read -r REPLY
     case $REPLY in
         [Yy]* ) sh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/xkb-version/useful_settings.sh)"; break;;
