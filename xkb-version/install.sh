@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Check dependencies: sudo, curl or wget
+# Check dependencies: sudo, curl, or wget
 if [ -z "$(command -v sudo)" ] || ([ -z "$(command -v curl)" ] && [ -z "$(command -v wget)" ]); then
   if [ -z "$(command -v sudo)" ]; then
     echo "sudo is not installed. doas is not supported. Note that after installing sudo, you may have to set it up manually after installation."
@@ -29,12 +29,13 @@ if [ -z "$(command -v sudo)" ] || ([ -z "$(command -v curl)" ] && [ -z "$(comman
   fi
 fi
 
-# Check if the user is not root
+# Check that the user is not root
 if [ "$(id -u)" = "0" ]; then
     echo "Do not run any script as root unless you know you have to." 1>&2
     exit 1
 fi
 
+# Install or uninstall
 while true; do
 	echo "Note that this script will reset your xkb us keyboard layout. Which P layout would you like to install? (English(Default)/International/Revert us layout to default/Abort)"
     read -r REPLY
