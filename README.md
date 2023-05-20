@@ -171,7 +171,7 @@ What if we could (at least partially) fix all this? With barely any effort?
 
 ## Design requirements
 
-* Common shortcuts such as copy-paste and select all preserved (qw, as, zxcv)
+* Common shortcuts such as copy-paste and select all preserved (qw, asf, zxcv)
 * Game compatible (preserves qwer, asdf)
 * Preserves modifier keys (Relearning these take a lot of time)
 * Preserve hjkl for older audiences still using vi
