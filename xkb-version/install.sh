@@ -4,8 +4,10 @@
 os=$(uname)
 if [ "$os" = 'Linux' ]; then
   format='kmap.gz'
+  loadmap='loadkeys us'
 elif [ "$os" = 'FreeBSD' ]; then
   format='kbd'
+  loadmap='kbdmap'
 else
   echo "Unsupported OS ${os}."
   exit 1
@@ -63,8 +65,8 @@ tmp_dir=$(mktemp -d -t p-layout-XXXXXXXXXX)
 
 if $WouldGet; then 
   echo "Downloading the xkb layout..."
-  if [ -z "$(curl -L https://github.com/coughingmouse/p-layout/raw/main/xkb-version/$which_layout > $tmp_dir/us)" ]; then
-    wget https://github.com/coughingmouse/p-layout/raw/main/xkb-version/$which_layout -O $tmp_dir/us
+  if [ -z "$(curl -sL https://github.com/coughingmouse/p-layout/raw/main/xkb-version/$which_layout > $tmp_dir/us)" ]; then
+    wget -q https://github.com/coughingmouse/p-layout/raw/main/xkb-version/$which_layout -O $tmp_dir/us
   fi
   # make error from curl output error message and stop shell script
   if [ $? -ne 0 ]; then
@@ -90,6 +92,7 @@ if $WouldGet; then
     setxkbmap us
     # use "loadkeys p" for vt
     sudo setupcon --save-keyboard /etc/console-setup/cached_UTF-8_del.$format
+    sudo $loadmap
 
   else
     echo "There's something wrong. Layout symbol file /usr/share/X11/xkb/symbols/us doesn't exist. Are you really using X11 or Wayland?"
@@ -107,13 +110,13 @@ if $WouldRemove; then
 
   else
     echo "Downloading us layout from freedesktop..."
-    if [ -z "$(curl -L https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/raw/master/symbols/us > $tmp_dir/us)" ]; then
-      wget https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/raw/master/symbols/us -O $tmp_dir/us
+    if [ -z "$(curl -sL https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/raw/master/symbols/us > $tmp_dir/us)" ]; then
+      wget -q https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/raw/master/symbols/us -O $tmp_dir/us
     fi
     if [ $? -ne 0 ]; then
       echo "Could not download from freedesktop.org. Trying github.com..."
-      if [ -z "$(curl -L https://github.com/freedesktop/xkeyboard-config/raw/master/symbols/us > $tmp_dir/us)" ]; then
-        wget https://github.com/freedesktop/xkeyboard-config/raw/master/symbols/us -O $tmp_dir/us
+      if [ -z "$(curl -sL https://github.com/freedesktop/xkeyboard-config/raw/master/symbols/us > $tmp_dir/us)" ]; then
+        wget -q https://github.com/freedesktop/xkeyboard-config/raw/master/symbols/us -O $tmp_dir/us
       fi
       # make error from curl output error message and stop shell script
       if [ $? -ne 0 ]; then
@@ -124,7 +127,9 @@ if $WouldRemove; then
     echo "Reverting P layout back to default us layout. Changing layout needs wheel access, so here we use 'sudo', which might prompt you a password request."
     sudo mv $tmp_dir/us /usr/share/X11/xkb/symbols/us
     setxkbmap us
+    # Update on Console
     sudo setupcon --save-keyboard /etc/console-setup/cached_UTF-8_del.$format
+    sudo $loadmap
   fi  
   exit 0;
 fi
