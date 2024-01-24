@@ -89,7 +89,7 @@ if $WouldGet; then
     rm -rf $tmp_dir
     setxkbmap us
     # use "loadkeys p" for vt
-    sudo setupcon -k --save-keyboard /etc/console-setup/cached_UTF-8_del.$format
+    sudo setupcon --save-keyboard /etc/console-setup/cached_UTF-8_del.$format
 
   else
     echo "There's something wrong. Layout symbol file /usr/share/X11/xkb/symbols/us doesn't exist. Are you really using X11 or Wayland?"
@@ -124,7 +124,7 @@ if $WouldRemove; then
     echo "Reverting P layout back to default us layout. Changing layout needs wheel access, so here we use 'sudo', which might prompt you a password request."
     sudo mv $tmp_dir/us /usr/share/X11/xkb/symbols/us
     setxkbmap us
-    sudo setupcon -k --save-keyboard /etc/console-setup/cached_UTF-8_del.$format
+    sudo setupcon --save-keyboard /etc/console-setup/cached_UTF-8_del.$format
   fi  
   exit 0;
 fi
