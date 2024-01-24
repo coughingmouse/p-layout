@@ -1,5 +1,16 @@
 #!/bin/sh
 
+# Check OS
+os=$(uname)
+if [ "$os" = 'Linux' ]; then
+  format='kmap.gz'
+elif [ "$os" = 'FreeBSD' ]; then
+  format='kbd'
+else
+  echo "Unsupported OS ${os}."
+  exit 1
+fi
+
 # Check dependencies: sudo, curl, or wget
 if [ -z "$(command -v sudo)" ] || ([ -z "$(command -v curl)" ] && [ -z "$(command -v wget)" ]); then
   if [ -z "$(command -v sudo)" ]; then
@@ -78,6 +89,8 @@ if $WouldGet; then
     rm -rf $tmp_dir
     setxkbmap us
     # use "loadkeys p" for vt
+    sudo setupcon -k --save-keyboard /etc/console-setup/cached_UTF-8_del.$format
+
   else
     echo "There's something wrong. Layout symbol file /usr/share/X11/xkb/symbols/us doesn't exist. Are you really using X11 or Wayland?"
     exit 1;
@@ -111,6 +124,7 @@ if $WouldRemove; then
     echo "Reverting P layout back to default us layout. Changing layout needs wheel access, so here we use 'sudo', which might prompt you a password request."
     sudo mv $tmp_dir/us /usr/share/X11/xkb/symbols/us
     setxkbmap us
+    sudo setupcon -k --save-keyboard /etc/console-setup/cached_UTF-8_del.$format
   fi  
   exit 0;
 fi
