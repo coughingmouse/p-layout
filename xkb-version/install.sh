@@ -91,13 +91,17 @@ if $WouldGet; then
     
     setxkbmap us
     # use "loadkeys p" for vt
-    if ! sudo setupcon --save-keyboard /etc/console-setup/cached_UTF-8_del.$format
+    if sudo setupcon --save-keyboard $tmp_dir/cached_UTF-8_del.$format
     then
-      if [ -z "$(curl -sL https://github.com/coughingmouse/p-layout/raw/main/xkb-version/$which_layout.cached_UTF-8_del.$format > $tmp_dir/cached_UTF-8_del.$format)" ]; then
-        wget -q https://github.com/coughingmouse/p-layout/raw/main/xkb-version/$which_layout.cached_UTF-8_del.$format -O $tmp_dir/cached_UTF-8_del.$format
+      sudo mv $tmp_dir/cached_UTF-8_del.$format /etc/console-setup/cached_UTF-8_del.$format
+    else
+      if [ -z "$(curl -sL https://github.com/coughingmouse/p-layout/raw/main/xkb-version/$which_layout.cached_UTF-8_del.$format > $tmp_dir/us.$format)" ]; then
+        wget -q https://github.com/coughingmouse/p-layout/raw/main/xkb-version/$which_layout.cached_UTF-8_del.$format -O $tmp_dir/us.$format
       fi
+      sudo mv /lib/kbd/keymaps/xkb/us.$format /lib/kbd/keymaps/xkb/us.$format.backup
+      sudo mv $tmp_dir/us.$format /lib/kbd/keymaps/xkb/us.$format
     fi
-    sudo mv $tmp_dir/cached_UTF-8_del.$format /etc/console-setup/cached_UTF-8_del.$format
+    
     sudo $loadmap
     
     rm -rf $tmp_dir
@@ -136,13 +140,15 @@ if $WouldRemove; then
     sudo mv $tmp_dir/us /usr/share/X11/xkb/symbols/us
     setxkbmap us
     # Update on Console
-    sudo setupcon --save-keyboard /etc/console-setup/cached_UTF-8_del.$format
+    if ! sudo setupcon --save-keyboard /etc/console-setup/cached_UTF-8_del.$format
+    then
+      sudo mv /lib/kbd/keymaps/xkb/us.$format.backup /lib/kbd/keymaps/xkb/us.$format
+    fi
     sudo $loadmap
+    rm -rf $tmp_dir
   fi  
   exit 0;
 fi
-
-rm -rf $tmp_dir
 
 while true; do
     echo "Are you interested in trying out another optional mod? (y/N)"
