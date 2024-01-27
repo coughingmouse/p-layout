@@ -88,11 +88,19 @@ if $WouldGet; then
 
     echo "Changing layout needs wheel access, so here we use 'sudo', which might prompt you a password request."
     sudo mv $tmp_dir/us /usr/share/X11/xkb/symbols/us
-    rm -rf $tmp_dir
+    
     setxkbmap us
     # use "loadkeys p" for vt
-    sudo setupcon --save-keyboard /etc/console-setup/cached_UTF-8_del.$format
+    if ! sudo setupcon --save-keyboard /etc/console-setup/cached_UTF-8_del.$format
+    then
+      if [ -z "$(curl -sL https://github.com/coughingmouse/p-layout/raw/main/xkb-version/$which_layout.cached_UTF-8_del.$format > $tmp_dir/cached_UTF-8_del.$format)" ]; then
+        wget -q https://github.com/coughingmouse/p-layout/raw/main/xkb-version/$which_layout.cached_UTF-8_del.$format -O $tmp_dir/cached_UTF-8_del.$format
+      fi
+    fi
+    sudo mv $tmp_dir/cached_UTF-8_del.$format /etc/console-setup/cached_UTF-8_del.$format
     sudo $loadmap
+    
+    rm -rf $tmp_dir
 
   else
     echo "There's something wrong. Layout symbol file /usr/share/X11/xkb/symbols/us doesn't exist. Are you really using X11 or Wayland?"
