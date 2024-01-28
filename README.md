@@ -36,13 +36,13 @@ zsh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/macOS-ve
 
 The layout is with an amazing app called Ukelele. Installing for everyone enables it on the device before (and on the password dialogs) and after login. After installation, you will have to enable it by somehow adding it to your list of layouts as well as make it default for user and for the login screen. To uninstall,run the installer again.
 
-### Linux (and BSDs?)
+### Linux (and FreeBSD?)
 
 Note that this layout is not implemented correctly, although it does have every feature it needs.
 
 * Supported layouts: English (Default), International
 
-I uploaded the thingy I now use to install the layout [here](https://github.com/coughingmouse/p-layout/tree/main/xkb-version). Note that it will not work on vt, which you are likely using on BSDs. **You need to be using us or us altgr-intl layout** on X11 or Wayland (or i.e. ones that respect xkb). Try running it. I've only tested it on Pop!\_OS, Fedora, and Debian, but it should work almost everywhere.
+I uploaded the thingy I now use to install the layout [here](https://github.com/coughingmouse/p-layout/tree/main/xkb-version). **You need to be using some us layout**. Try running it. I've only tested it on Pop!\_OS, Fedora, and Debian, but it should work almost everywhere.
 
 ```sh
 sh -c "$(curl -fsSL https://github.com/coughingmouse/p-layout/raw/main/xkb-version/install.sh)"
@@ -69,6 +69,20 @@ Note that spacebar cannot be used for non-space letters without using IME, which
 2. Place and unzip to the ```yourchoice_p``` folder where you want to put it permanently.
 3. Open the folder. You should see an executable file. **DO NOT** delete anything in the downloaded repository until you delete the layout with the same executable file.
 4. Okay, now you're safe to run the executable. After uninstalling it, you can delete the enclosing folder.
+
+### Mozc (Google Japanese input)
+
+* Supported layouts: English
+
+#### Usage
+
+0. Download a *-romantable.txt file.
+1. Make sure you have mozc-utils-gui installed. Open it by opening up IME properties when mozc IME is in use or just running it fron GUI/shell. 
+2. In General tab, "Keymap-Romaji table", click "Customize..."
+3. On the bottom-left corner, there's a button called "Edit". Click that and the buttton "Import from file..."
+4. Yes, you will be overwriting your previous setting. No worries, you can easily reset to the default setting. But if you were using a customized setting, say no.
+5. In case you said no, you should back up your setting first, with "Edit-Export to file..."
+6. Select the file, and click "Open".
 
 ## P layout
 
