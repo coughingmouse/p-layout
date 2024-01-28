@@ -4,10 +4,10 @@
 os=$(uname)
 if [ "$os" = 'Linux' ]; then
   format='kmap.gz'
-  loadmap='loadkeys'
+  usr/share/vt/keymaps/='loadkeys'
 elif [ "$os" = 'FreeBSD' ]; then
   format='kbd'
-  loadmap='kbdmap'
+  loadmap='kbdcontrol'
 else
   echo "Unsupported OS ${os}."
   exit 1
@@ -98,12 +98,35 @@ if $WouldGet; then
       if [ -z "$(curl -sL https://github.com/coughingmouse/p-layout/raw/main/xkb-version/$which_layout.cached_UTF-8_del.$format > $tmp_dir/us.$format)" ]; then
         wget -q https://github.com/coughingmouse/p-layout/raw/main/xkb-version/$which_layout.cached_UTF-8_del.$format -O $tmp_dir/us.$format
       fi
-      sudo mv /lib/kbd/keymaps/xkb/us.$format /lib/kbd/keymaps/xkb/us.$format.backup
-      sudo mv $tmp_dir/us.$format /lib/kbd/keymaps/xkb/us.$format
+      if which uname > /dev/null; then
+        case "`uname`" in
+          *Linux*)
+            sudo mv /lib/kbd/keymaps/xkb/us.$format /lib/kbd/keymaps/xkb/us.$format.backup
+            sudo mv $tmp_dir/us.$format /lib/kbd/keymaps/xkb/us.$format ;;
+          *FreeBSD*) 
+            mv /usr/share/syscons/keymaps/us.$format /usr/share/syscons/keymaps/us.$format.backup
+	    sudo mv $tmp_dir/us.$format /usr/share/syscons/keymaps/us.$format
+            mv /usr/share/vt/keymaps/us.$format /usr/share/vt/keymaps/us.$format.backup
+	    sudo mv $tmp_dir/us.$format /usr/share/vt/keymaps/us.$format ;;
+          *) 
+	    echo 'p-install: Unknown kernel (only Linux and FreeBSD are supported).' >&2
+            exit 1
+        esac
+      fi
     fi
-    if ! sudo $loadmap /etc/console-setup/cached_UTF-8_del.$format
-    then sudo $loadmap /lib/kbd/keymaps/xkb/us.$format
+
+    if which uname > /dev/null; then
+      case "`uname`" in
+        *Linux*)
+          if ! sudo $loadmap /etc/console-setup/cached_UTF-8_del.$format
+          then sudo $loadmap /lib/kbd/keymaps/xkb/us.$format
+          fi ;;
+        *FreeBSD*) 
+	  $loadmap -l /usr/share/vt/keymaps/us.$format
+          $loadmap -f 70 "`printf '\033[3~'`"
+      esac
     fi
+    
     rm -rf $tmp_dir
 
   else
@@ -140,12 +163,30 @@ if $WouldRemove; then
     sudo mv $tmp_dir/us /usr/share/X11/xkb/symbols/us
     setxkbmap us
     # Update on Console
-    if ! sudo setupcon --save-keyboard /etc/console-setup/cached_UTF-8_del.$format
-    then
-      sudo mv /lib/kbd/keymaps/xkb/us.$format.backup /lib/kbd/keymaps/xkb/us.$format
+    if ! sudo setupcon --save-keyboard /etc/console-setup/cached_UTF-8_del.$format; then
+      if which uname > /dev/null; then
+        case "`uname`" in
+          *Linux*)
+            sudo mv /lib/kbd/keymaps/xkb/us.$format.backup /lib/kbd/keymaps/xkb/us.$format ;;
+          *FreeBSD*) 
+            mv /usr/share/syscons/keymaps/us.$format.backup /usr/share/syscons/keymaps/us.$format
+            mv /usr/share/vt/keymaps/us.$format.backup /usr/share/vt/keymaps/us.$format ;;
+          *) 
+            echo 'p-install: Unknown kernel (only Linux and FreeBSD are supported).' >&2
+            exit 1
+        esac
+      fi
     fi
-    if ! sudo $loadmap /etc/console-setup/cached_UTF-8_del.$format
-    then sudo $loadmap /lib/kbd/keymaps/xkb/us.$format
+    if which uname > /dev/null; then
+      case "`uname`" in
+        *Linux*)
+          if ! sudo $loadmap /etc/console-setup/cached_UTF-8_del.$format
+          then sudo $loadmap /lib/kbd/keymaps/xkb/us.$format
+          fi ;;
+        *FreeBSD*) 
+	  $loadmap -l /usr/share/vt/keymaps/us.$format
+          $loadmap -f 70 "`printf '\033[3~'`"
+      esac
     fi
     rm -rf $tmp_dir
   fi  
