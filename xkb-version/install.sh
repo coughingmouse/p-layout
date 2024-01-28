@@ -4,7 +4,7 @@
 os=$(uname)
 if [ "$os" = 'Linux' ]; then
   format='kmap.gz'
-  loadmap='loadkeys us'
+  loadmap='loadkeys'
 elif [ "$os" = 'FreeBSD' ]; then
   format='kbd'
   loadmap='kbdmap'
@@ -101,9 +101,9 @@ if $WouldGet; then
       sudo mv /lib/kbd/keymaps/xkb/us.$format /lib/kbd/keymaps/xkb/us.$format.backup
       sudo mv $tmp_dir/us.$format /lib/kbd/keymaps/xkb/us.$format
     fi
-    
-    sudo $loadmap
-    
+    if ! sudo $loadmap /etc/console-setup/cached_UTF-8_del.$format
+    then sudo $loadmap /lib/kbd/keymaps/xkb/us.$format
+    fi
     rm -rf $tmp_dir
 
   else
@@ -144,7 +144,9 @@ if $WouldRemove; then
     then
       sudo mv /lib/kbd/keymaps/xkb/us.$format.backup /lib/kbd/keymaps/xkb/us.$format
     fi
-    sudo $loadmap
+    if ! sudo $loadmap /etc/console-setup/cached_UTF-8_del.$format
+    then sudo $loadmap /lib/kbd/keymaps/xkb/us.$format
+    fi
     rm -rf $tmp_dir
   fi  
   exit 0;
