@@ -4,7 +4,7 @@
 os=$(uname)
 if [ "$os" = 'Linux' ]; then
   format='kmap.gz'
-  usr/share/vt/keymaps/='loadkeys'
+  loadmap='loadkeys'
 elif [ "$os" = 'FreeBSD' ]; then
   format='kbd'
   loadmap='kbdcontrol'
